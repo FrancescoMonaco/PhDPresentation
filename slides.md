@@ -105,7 +105,7 @@ A coreset predictor for hash indices
 transition: fade
 ---
 
-# Test
+# Test 
 
 ---
 transition: fade
