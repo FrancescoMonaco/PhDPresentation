@@ -117,7 +117,7 @@ transition: fade
 ---
 
 # Algorithms with Predictions
-A Bloom filter predictor for aproximate triangle counting
+A Bloom filter predictor for approximate triangle counting
 
 - <span v-mark.orange="1"> Setting</span>:
     Triangle counting is a fundamental task in graph mining, with applications in social network analysis and bioinformatics.
@@ -135,11 +135,11 @@ transition: fade
 ---
 
 # Algorithms with Predictions
-A Bloom filter predictor for aproximate triangle counting
+A Bloom filter predictor for approximate triangle counting
 
 ---
 transition: fade
 layout: center
 ---
 
-# <span class="leit-title">ThanKs foR youR AttentioN</span>
+# <span class="leit-title">ThanKs foR <br> yOuR AttenTion</span>
