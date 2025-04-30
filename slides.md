@@ -93,19 +93,49 @@ transition: fade
 A coreset predictor for hash indices
 
 - <span v-mark.orange="1"> Setting</span>:
-     Some hash indices are data adaptive and don't need to 
+    Hash indices are used for tasks like clustering, recommender systems
+
+    Some hash indices, like PUFFINN*, are data adaptive and don't need to have their parameter tuned to the task, so they are preferred .
 
 - <span v-mark.red="2"> Problem</span>:
-     They are usually slower than the non-adaptive ones
+     Data adaptive hash indices are usually slower than the non-adaptive ones during the search operation, we would like to keep the data adaptive property while making it competitive with carefully tuned non-adaptive hash indices.
 
-- <span v-mark.red="3"> Solution </span>:
-    We implement a coreset predictor
+- <span v-mark.green="3"> Solution </span>:
+    We implement a coreset predictor that drives the search of the hash index. Saving time during the search operation.
+
+
+###### *([Aumüller et al., 2020](https://arxiv.org/abs/1906.12211))
+---
+transition: fade
+---
+
+# Algorithms with Predictions
+A coreset predictor for hash indices
 
 ---
 transition: fade
 ---
 
-# Test 
+# Algorithms with Predictions
+A Bloom filter predictor for aproximate triangle counting
+
+- <span v-mark.orange="1"> Setting</span>:
+    Triangle counting is a fundamental task in graph mining, with applications in social network analysis and bioinformatics.
+
+    The task is to count the number of times a certain pattern appears.
+
+- <span v-mark.red="2"> Problem</span>:
+    Current predictors are trained one time and their performaces degrade over time due to the dynamic nature of the data. We want to use an oracle that can detect the shifts in the data distribution and adapt to them.
+
+- <span v-mark.green="3"> Solution </span>:
+    We implement a sensitive Bloom filter that with constant time operations can update itself to the new data distribution. This allows us to obtain accurate predictions.
+
+---
+transition: fade
+---
+
+# Algorithms with Predictions
+A Bloom filter predictor for aproximate triangle counting
 
 ---
 transition: fade
