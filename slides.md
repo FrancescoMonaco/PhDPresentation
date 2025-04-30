@@ -52,6 +52,10 @@ transition: fade
 # The Problem
 A continuos increase in the volume of data
 
+ - Many mining algorithms scale with super linear behaviors
+ - We need to find efficient techniques to deal with this data
+ - We want to have theoretical guarantees on the performance of our algorithms and the quality of the results
+
 ---
 transition: fade
 ---
