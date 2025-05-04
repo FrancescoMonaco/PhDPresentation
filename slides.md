@@ -75,7 +75,7 @@ transition: fade
 The current challenges
 
 - Neural predictors need to be trained using specific techniques (e.g., conformal predictions, calibrated predictions) and lots of data to respect the theoretical guarantees on the predictions.
-- We can use hash structures to obtain 
+- We can use hash structures to obtain deployable and robust predictors.
 
 
 ---
