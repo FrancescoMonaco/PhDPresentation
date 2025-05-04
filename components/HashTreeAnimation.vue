@@ -8,84 +8,120 @@ onMounted(() => {
     .attr('width', 600)
     .attr('height', 400)
 
-  const query = svg.append('circle')
-    .attr('cx', 100)
-    .attr('cy', 200)
-    .attr('r', 8)
-    .attr('fill', 'orange')
-    .attr('opacity', 0)
+  const loop = () => {
+    svg.selectAll('*').remove()
 
-  const comparePoints = d3.range(5).map((_, i) => ({
-    x: 160 + i * 30,
-    y: 160 + (i % 2 === 0 ? -20 : 20)
-  }))
-
-  const treeBranches = [
-    { x1: 400, y1: 200, x2: 450, y2: 150 },
-    { x1: 400, y1: 200, x2: 450, y2: 250 },
-    { x1: 450, y1: 150, x2: 500, y2: 130 },
-    { x1: 450, y1: 150, x2: 500, y2: 170 },
-    { x1: 450, y1: 250, x2: 500, y2: 230 },
-    { x1: 450, y1: 250, x2: 500, y2: 270 }
-  ]
-
-  // Animation sequence
-  query.transition().delay(500).duration(500).attr('opacity', 1)
-
-  setTimeout(() => {
-    svg.selectAll('.compare')
-      .data(comparePoints)
-      .enter()
-      .append('circle')
-      .attr('class', 'compare')
-      .attr('cx', d => d.x)
-      .attr('cy', d => d.y)
-      .attr('r', 6)
-      .attr('fill', 'lightblue')
+    // Query Point
+    const query = svg.append('circle')
+      .attr('cx', 100)
+      .attr('cy', 200)
+      .attr('r', 8)
+      .attr('fill', 'orange')
       .attr('opacity', 0)
-      .transition()
+
+    svg.append('text')
+      .attr('x', 80)
+      .attr('y', 190)
+      .text('Query')
+      .attr('fill', 'white')
+      .attr('opacity', 0)
+      .transition().delay(200).duration(300).attr('opacity', 1)
+
+    query.transition()
+      .delay(500)
       .duration(500)
       .attr('opacity', 1)
-  }, 1200)
 
-  setTimeout(() => {
-    svg.append('line')
-      .attr('x1', 130)
-      .attr('y1', 200)
-      .attr('x2', 130)
-      .attr('y2', 200)
-      .attr('stroke', 'black')
-      .attr('stroke-width', 2)
-      .transition()
-      .duration(600)
-      .attr('x2', 400)
-      .attr('y2', 200)
-  }, 2000)
+    const comparePoints = d3.range(5).map((_, i) => ({
+      x: 160 + i * 30,
+      y: 160 + (i % 2 === 0 ? -20 : 20)
+    }))
 
-  setTimeout(() => {
-    svg.selectAll('.branch')
-      .data(treeBranches)
-      .enter()
-      .append('line')
-      .attr('class', 'branch')
-      .attr('x1', d => d.x1)
-      .attr('y1', d => d.y1)
-      .attr('x2', d => d.x1)
-      .attr('y2', d => d.y1)
-      .attr('stroke', '#aaa')
-      .attr('stroke-width', 2)
-      .transition()
-      .duration(800)
-      .attr('x2', d => d.x2)
-      .attr('y2', d => d.y2)
-  }, 2700)
+    setTimeout(() => {
+      svg.selectAll('.compare')
+        .data(comparePoints)
+        .enter()
+        .append('circle')
+        .attr('class', 'compare')
+        .attr('cx', d => d.x)
+        .attr('cy', d => d.y)
+        .attr('r', 0)
+        .attr('fill', 'lightblue')
+        .transition()
+        .duration(500)
+        .attr('r', 6)
 
-  setTimeout(() => {
-    svg.selectAll('.branch')
-      .transition()
-      .duration(400)
-      .attr('stroke', (d, i) => i % 2 === 0 ? 'green' : '#555')
-  }, 3600)
+      svg.append('text')
+        .attr('x', 200)
+        .attr('y', 120)
+        .text('Comparison Set (C)')
+        .attr('fill', 'white')
+        .attr('opacity', 0)
+        .transition().delay(200).duration(300).attr('opacity', 1)
+    }, 1000)
+
+    // Arrow to tree
+    setTimeout(() => {
+      svg.append('line')
+        .attr('x1', 130)
+        .attr('y1', 200)
+        .attr('x2', 130)
+        .attr('y2', 200)
+        .attr('stroke', 'white')
+        .attr('stroke-width', 2)
+        .transition()
+        .duration(800)
+        .attr('x2', 400)
+        .attr('y2', 200)
+    }, 1800)
+
+    const treeBranches = [
+      { x1: 400, y1: 200, x2: 450, y2: 150 },
+      { x1: 400, y1: 200, x2: 450, y2: 250 },
+      { x1: 450, y1: 150, x2: 500, y2: 130 },
+      { x1: 450, y1: 150, x2: 500, y2: 170 },
+      { x1: 450, y1: 250, x2: 500, y2: 230 },
+      { x1: 450, y1: 250, x2: 500, y2: 270 }
+    ]
+
+    setTimeout(() => {
+      svg.selectAll('.branch')
+        .data(treeBranches)
+        .enter()
+        .append('line')
+        .attr('class', 'branch')
+        .attr('x1', d => d.x1)
+        .attr('y1', d => d.y1)
+        .attr('x2', d => d.x1)
+        .attr('y2', d => d.y1)
+        .attr('stroke', '#888')
+        .attr('stroke-width', 2)
+        .transition()
+        .duration(600)
+        .attr('x2', d => d.x2)
+        .attr('y2', d => d.y2)
+
+      svg.append('text')
+        .attr('x', 420)
+        .attr('y', 110)
+        .text('Hash Tree')
+        .attr('fill', 'white')
+        .attr('opacity', 0)
+        .transition().duration(300).attr('opacity', 1)
+    }, 2800)
+
+    setTimeout(() => {
+      svg.selectAll('.branch')
+        .transition()
+        .duration(600)
+        .attr('stroke', (d, i) => i % 2 === 0 ? 'limegreen' : '#444')
+    }, 3600)
+
+    // Loop every 6s
+    setTimeout(loop, 3000)
+  }
+
+  loop()
 })
 </script>
 

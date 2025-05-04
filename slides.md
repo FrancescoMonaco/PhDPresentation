@@ -37,7 +37,7 @@ mdc: true
   letter-spacing: 0.05em;
 }
 </style>
-# <span class="leit-title">Enriching Mining Algorithms with Hash Oracles</span>
+# <span class="leit-title">Enriching Similarity Search Algorithms with Oracles</span>
 
 <div class="absolute bottom-10">
   <span class="font-700">
@@ -52,7 +52,7 @@ transition: fade
 # The Problem
 A continuos increase in the volume of data
 
- - Many mining algorithms scale with super linear behaviors
+ - Many similarity search algorithms scale with super linear behaviors
  - We need to find efficient techniques to deal with this data
  - We want to have theoretical guarantees on the performance of our algorithms and the quality of the results
 
@@ -63,12 +63,18 @@ transition: fade
 # A Recent Development
 Algorithms with Predictions
 
+- Algorithms with predictions is a new framework to design algorithms that use a predictor to improve their performance.
+- They keep the theoretical guarantees of the original algorithm while improving their performance in the <span v-mark.yellow="1">average case</span>.
+- Neural predictors are <span v-mark.red="2">trained</span> on the data to be used in the algorithm.
+
 ---
 transition: fade
 ---
 
 # Algorithms with Predictions
-Do they work?
+
+
+
 
 ---
 transition: fade
