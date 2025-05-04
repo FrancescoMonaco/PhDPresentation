@@ -72,8 +72,10 @@ transition: fade
 ---
 
 # Algorithms with Predictions
+The current challenges
 
-
+- Neural predictors need to be trained using specific techniques (e.g., conformal predictions, calibrated predictions) and lots of data to respect the theoretical guarantees on the predictions.
+- We can use hash structures to obtain 
 
 
 ---
@@ -151,6 +153,8 @@ transition: fade
 
 # Algorithms with Predictions
 A Bloom filter predictor for distance approximations
+
+<Bloom />
 
 ---
 transition: fade
