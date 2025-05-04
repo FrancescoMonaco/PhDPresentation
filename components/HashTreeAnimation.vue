@@ -118,7 +118,7 @@ onMounted(() => {
     }, 3600)
 
     // Loop every 6s
-    setTimeout(loop, 3000)
+    setTimeout(loop, 6000)
   }
 
   loop()
