@@ -130,11 +130,11 @@ transition: fade
 A Bloom filter predictor for distance approximations
 
 - <span v-mark.orange="1"> Setting</span>:
-    Computing distances between elements is fundamental in tasks of similarity search. This 
+    Computing distances between elements is fundamental in tasks of similarity search.
 
 - <span v-mark.red="2"> Problem</span>:
     Computing distances is expensive, especially in high dimensional spaces. We want to approximate the distance between two elements using a small subset of their dimensions.
-    Current methods to approximate distances have known problems 
+    Current methods to approximate distances have known problems on robustness.
 
 - <span v-mark.green="3"> Solution</span>:
     We implement a sensitive Bloom filter to select the most relevant dimensions to be used in the distance approximation. We use the filter rapresentation to estimate the remaining dimensions.
