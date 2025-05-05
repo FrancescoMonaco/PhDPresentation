@@ -56,7 +56,7 @@ onMounted(runAnimation)
   <div class="flex flex-col items-center space-y-4">
     <div class="text-lg font-bold">Bloom Filter Approximation</div>
     <div class="flex flex-col items-start">
-      <div class="text-sm mb-1">Vector A</div>
+      <div class="text-sm mb-1">Element A</div>
       <div class="vectorA flex space-x-1">
         <div
           v-for="d in dims"
@@ -66,7 +66,7 @@ onMounted(runAnimation)
           :style="{ backgroundColor: d.selected ? '#34d399' : d.estimated ? '#fbbf24' : '#ccc' }"
         />
       </div>
-      <div class="text-sm mt-2 mb-1">Vector B</div>
+      <div class="text-sm mt-2 mb-1">Element B</div>
       <div class="vectorB flex space-x-1">
         <div
           v-for="d in dims"
@@ -78,7 +78,7 @@ onMounted(runAnimation)
       </div>
     </div>
     <div class="bloom-filter text-center mt-4 text-sm bg-indigo-600 text-white px-4 py-2 rounded shadow opacity-0 scale-50">
-      Bloom Filter selects dimensions
+      Bloom Filter selects the best dimensions and estimates the others
     </div>
     <div class="mt-2 text-xs text-gray-500">Green = Selected, Yellow = Estimated</div>
   </div>
