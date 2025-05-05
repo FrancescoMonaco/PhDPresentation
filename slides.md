@@ -97,6 +97,8 @@ transition: fade
 # Algorithms with Predictions
 The current challenges
 
+<br>
+
 - Neural predictors need to be trained using specific techniques (e.g., conformal predictions, calibrated predictions) and need lots of data to reach theoretical guarantees on the predictions.
 
 - We can use hash structures to obtain deployable and robust predictors.
@@ -113,7 +115,7 @@ What is the plan?
 - We want to integrate hash structures in the algorithms with predictions framework.
 
     - We obtain robust predictors that are easy to initialize and deploy.
-    - We address the challenges by high-dimensional data in ANNS.
+    - We address the challenges posed by high-dimensional data in ANNS.
 <br>
 ---
 transition: fade
@@ -142,6 +144,8 @@ transition: fade
 # Algorithms with Predictions
 A predictor for hash indices
 
+<br>
+
 - <span v-mark.orange="1"> Setting</span>:
     Hash indices, structures to answer Approximate Near Neighbor Queries, are used for many downstream tasks like clustering, recommender systems or pattern matching.
 
@@ -153,6 +157,7 @@ A predictor for hash indices
 - <span v-mark.green="3"> Solution</span>:
     We implement a predictor based on clusters and coresets that drives the search of the hash index. Saving time during the search operation.
 
+<br>
 
 ###### *([Aumüller et al., 2020](https://arxiv.org/abs/1906.12211))
 ---
@@ -170,6 +175,8 @@ transition: fade
 
 # Algorithms with Predictions
 A Bloom filter predictor for distance approximations
+
+<br>
 
 - <span v-mark.orange="1"> Setting</span>:
     Computing distances between elements is fundamental in tasks of similarity search.
@@ -196,6 +203,9 @@ transition: fade
 
 # Algorithms with Predictions
 A predictor for hash ensembles
+
+<br>
+
 - <span v-mark.orange="1"> Setting</span>:
      Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks.
 
