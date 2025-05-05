@@ -207,7 +207,7 @@ A predictor for hash ensembles
 <br>
 
 - <span v-mark.orange="1"> Setting</span>:
-     Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks.
+     Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks. Extremely useful to deal with data drift.
 
 - <span v-mark.blue="2"> Idea</span>:
     We want to extend the idea of ensembles to the hash setting. We want to use multiple hash indices to improve the performance of the search.
