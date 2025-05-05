@@ -58,7 +58,7 @@ transition: fade
 
 - In particular, we are interested in the Near Neighbor Search (ANNS) problem.
 
-   - Given a set of points and a query point, we want to find the point in the set that is closest to the query point.
+   - Given a set of elements and a query, we want to find the elements in the set <span v-mark.green = "1">that are closest</span> to the query.
    - This procedure is used in many applications like time series analysis, Minimum Spanning Tree, recommender systems.
 
 ---
@@ -71,7 +71,9 @@ A continuos increase in the volume of data
 <br>
 
  - Many similarity search algorithms scale with super linear behaviors.
+
  - We need to find efficient techniques to deal with this data.
+
  - We want to have theoretical guarantees on the performance of our algorithms and the quality of the results.
 
 ---
@@ -83,9 +85,11 @@ Algorithms with Predictions
 
 <br>
 
-- Algorithms with predictions is a new framework to design algorithms that use a predictor to improve their performance.
-- They keep the theoretical guarantees of the original algorithm while improving their performance in the <span v-mark.yellow="1">average case</span>.
-- The predictors are usually neural models <span v-mark.red="2">trained</span> on data that is similar to the one used in the algorithm.
+- Algorithms with predictions is a new framework to design algorithms that use a <span v-mark.yellow="1">predictor</span> to improve their performance.
+
+- They keep the theoretical guarantees of the original algorithm while improving their performance in the <span v-mark.yellow="2">average case</span>.
+
+- The predictors are usually neural models <span v-mark.red="3">trained</span> on data that is similar to the one used in the algorithm.
 ---
 transition: fade
 ---
@@ -107,6 +111,7 @@ What is the plan?
 <br>
 
 - We want to integrate hash structures in the algorithms with predictions framework.
+
     - We obtain robust predictors that are easy to initialize and deploy.
     - We address the challenges by high-dimensional data in ANNS.
 <br>
@@ -119,11 +124,13 @@ What is the plan?
 <br>
 
 - We want to integrate hash structures in the algorithms with predictions framework.
+
     - We obtain robust predictors that are easy to initialize and deploy.
     - We address the challenges by high-dimensional data in ANNS.
 <br>
 
 - We expand in the offline setting.
+
     - The algorithm with predictions framework started for streaming data.
     - In the last months some works showed that it is beneficial also in the offline one.
 
