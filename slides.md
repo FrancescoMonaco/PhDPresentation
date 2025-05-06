@@ -128,7 +128,7 @@ What is the plan?
 - We want to integrate hash structures in the algorithms with predictions framework.
 
     - We obtain robust predictors that are easy to initialize and deploy.
-    - We address the challenges by high-dimensional data in ANNS.
+    - We address the challenges posed by high-dimensional data in ANNS.
 <br>
 
 - We expand in the offline setting.
@@ -222,3 +222,35 @@ layout: center
 ---
 
 # <span class="leit-title">ThanKs foR <br> yOuR AttenTion</span>
+
+---
+transition: fade
+---
+
+# Extra
+A Computer Vision application
+
+- A CNN is used conjunctly with an LSTM to create a textual despcription of the people in a video stream.
+
+- To reverse search in a video from a textual description a hash index is used to find the matching frames.
+
+- The description creates a textual embedding, ANN search finds the closest frames in the hash index, the frames are then retrieved and the CNN is used to find the people in the frames.
+
+<br>
+
+###### *([Yuenyoung et al., 2022](https://www.mdpi.com/2504-2289/6/4/136))
+
+---
+transition: fade
+---
+
+# Extra
+An industry application
+
+- A hash index is used to cluster behaviours of a set of sensors in an incinerator.
+
+- A dictionary of behaviours helps the recognition of anomalies.
+
+- The project was carried out in collaboration with beanTech IT.
+
+!([](images/multidim_shap_profile.png))
