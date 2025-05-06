@@ -253,5 +253,5 @@ An industry application
 
 - The project was carried out in collaboration with beanTech IT.
 
-<img src="/images/multidim_shap_profile.png" style="width:80%; height:auto;" />
+<img src="/images/multidim_shap_profile.png" style="width:auto; height:65%;" />
 
