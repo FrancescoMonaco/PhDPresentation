@@ -214,7 +214,15 @@ A predictor for hash ensembles
 
 - <span v-mark.green="3"> Solution</span>:
     We implement an ensembles of hash indices, indices will complement each other on different data distributions. A predictor will be used to select the best hash index for the current data distribution.
-  
+
+---
+transition: fade
+---
+
+# Algorithms with Predictions
+A predictor for hash ensembles
+
+<Ensemble />
 
 ---
 transition: fade
