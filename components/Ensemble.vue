@@ -16,9 +16,9 @@
     const height = canvas.height
   
     const hashes = [
-      { x: 700, y: 100, color: '#FF6B6B', label: 'Hash A' },
-      { x: 700, y: 200, color: '#4D96FF', label: 'Hash B' },
-      { x: 700, y: 300, color: '#1DD1A1', label: 'Hash C' },
+      { x: 700, y: 100, color: '#FF6B6B', label: 'Hash A', labelColor: '#FFFFFF' },
+      { x: 700, y: 200, color: '#4D96FF', label: 'Hash B', labelColor: '#FFFFFF' },
+      { x: 700, y: 300, color: '#1DD1A1', label: 'Hash C', labelColor: '#FFFFFF' },
     ]
   
     const predictor = { x: 400, y: 200 }
@@ -31,7 +31,7 @@
       points.push({
         x: 50,
         y,
-        color: '#555',
+        color: '#e0dcdc',
         targetHash,
         stage: 0,
       })
