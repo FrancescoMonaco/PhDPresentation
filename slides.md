@@ -244,7 +244,7 @@ A Computer Vision application
 
 - The description creates a textual embedding, ANN search finds the closest frames in the hash index, the frames are then retrieved and the CNN is used to find the people in the frames.
 
-<img src="/images/mdpi.png" width="auto" height="37%" />
+<img src="/images/mdpi.png" width="auto" height="7%" />
 
 <br>
 
