@@ -238,11 +238,13 @@ transition: fade
 # Extra
 A Computer Vision application
 
-- A CNN is used conjunctly with an LSTM to create a textual despcription of the people in a video stream.
+- A CNN is used conjunctly with an LSTM to create a textual description of the people in a video stream.
 
 - To reverse search in a video from a textual description a hash index is used to find the matching frames.
 
 - The description creates a textual embedding, ANN search finds the closest frames in the hash index, the frames are then retrieved and the CNN is used to find the people in the frames.
+
+<img src="/images/mdpi.png" width="auto" height="37%" />
 
 <br>
 
