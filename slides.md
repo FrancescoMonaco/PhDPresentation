@@ -5,7 +5,7 @@ theme: default
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Enriching Similarity Search Algorithms with Oracles
+title: Enriching Similarity Search Algorithms with Predictors
 titleTemplate: '%s'
 author: 'Francesco Pio Monaco'
 info: |
@@ -37,7 +37,7 @@ mdc: true
   letter-spacing: 0.05em;
 }
 </style>
-# <span class="leit-title">Enriching Similarity Search Algorithms with Oracles</span>
+# <span class="leit-title">Enriching Similarity Search Algorithms with Predictors</span>
 
 <div class="absolute bottom-10">
   <span class="font-700">
@@ -265,3 +265,86 @@ An industry application
 
 <img src="/images/multidim_shap_profile.png" style="width:auto; height:65%;" />
 
+---
+transition: fade
+---
+
+# Extra
+Timeline
+
+```mermaid {theme: 'forest'}
+gantt
+    title Year 1 Timeline
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %Y
+    section PhD Activities
+    Lessons                        :crit, 2025-11-01, 2026-07-31
+    section Project Packages
+    Predictor MST Algorithm        :done, mst_predictor, 2025-11-01, 2026-03-30
+    Predictor ANN Queries          :active, ann_predictor, 2026-02-01, 2026-10-31
+    section Subactivities
+    Benchmarking                   :done, benchmark, 2025-11-01, 2026-01-31
+    Paper Preparation                     :done, paper_prep, 2026-02-01, 2026-03-30
+    Literature Review & Design     :active, review_design, 2026-02-01, 2026-07-31
+    ANN Evaluation                 :active, ann_eval, 2026-08-01, 2026-10-31
+    section Milestones/Deliverables
+    Closure MST Paper              :milestone, mst_closure, 2026-05-01, 1d
+    Framework for ANN Queries      :milestone, ann_framework, 2026-08-01, 1d
+```
+
+---
+transition: fade
+---
+
+# Extra
+Timeline
+
+```mermaid {theme: 'forest'}
+gantt
+    title Year 2 Timeline
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %Y
+
+    section PhD Activities
+    Period Abroad                  :crit, abroad, 2027-02-01, 2027-10-20
+
+    section Project Packages
+    ANN Predictor                  :done, ann_predictor, 2026-11-01, 2027-01-31
+    Distance Predictor             :active, dist_predictor, 2027-02-01, 2027-10-31
+
+    section Subactivities
+    Paper Preparation (ANN)        :done, ann_prep, 2026-11-01, 2027-01-31
+    Literature Review & Development:active, dist_lit_dev, 2027-02-01, 2027-07-31
+    Evaluation                     :active, dist_benchmark, 2027-08-01, 2027-09-25
+    Paper Preparation              :active, paper_prep, 2027-09-01, 2027-11-30
+
+    section Milestones/Deliverables
+    ANN Paper Closure              :milestone, ann_closure, 2027-02-01, 1d
+    Distance Framework             :milestone, dist_framework, 2027-08-01, 1d
+```
+
+---
+transition: fade
+---
+
+# Extra
+Timeline
+
+```mermaid {theme: 'forest'}
+gantt
+    title Year 3 Timeline
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %Y
+    section PhD Activities
+    Thesis Preparation             :crit, thesis_prep, 2028-03-01, 2028-11-30
+    section Project Packages
+    Hash Ensemble Predictor        :active, hash_predictor, 2027-11-01, 2028-07-31
+    section Subactivities
+    Develop Hash Ensemble    :active, ensemble_dev, 2027-11-01, 2028-01-31
+    Predictor for Ensamble       :active, predictor_dev, 2028-02-01, 2028-04-30
+    Evaluation          :active, hash_eval, 2028-04-11, 2028-05-18
+    Downstream Tasks    :active, down, 2028-05-13, 2028-08-01
+    section Milestones/Deliverables
+    Distance Paper Closure         :milestone, dist_closure, 2028-02-01, 1d
+    Thesis Closure                 :milestone, thesis_closure, 2028-11-07, 1d
+```
