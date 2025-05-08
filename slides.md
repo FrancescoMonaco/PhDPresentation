@@ -99,7 +99,7 @@ The current challenges
 
 <br>
 
-- Neural predictors need to be trained using specific techniques <span v-mark.orange="1">(e.g., conformal predictions, calibrated predictions)</span> and need lots of data to reach theoretical guarantees on the predictions.
+- Neural predictors need to be trained using specific techniques (e.g., <span v-mark.orange="1">conformal or calibrated predictions</span>) and need lots of data to reach theoretical guarantees on the predictions.
 
 - We can use hash structures to obtain deployable and robust predictors.
 
@@ -267,6 +267,175 @@ An industry application
 - The project was carried out in collaboration with beanTech IT.
 
 <img src="/images/multidim_shap_profile.png" style="width:auto; height:65%;" />
+
+---
+transition: fade
+---
+
+# Extra
+How much can predictors help? An application to motif discovery
+
+<table class="w-full text-xs border-collapse border border-gray-300">
+  <thead>
+        <th class="border px-1 py-0.5">dataset</th>
+        <th class="border px-1 py-0.5">n (length)</th>
+        <th class="border px-1 py-0.5">D (dimensionality)</th>
+        <th class="border px-1 py-0.5">w (window)</th>
+        <th class="border px-1 py-0.5">d (motif dimensionality)</th>
+  </thead>
+    <tbody>
+    <tr>
+      <td class="border px-1 py-0.5">potentials</td>
+      <td class="border px-1 py-0.5">2 500</td>
+      <td class="border px-1 py-0.5">8</td>
+      <td class="border px-1 py-0.5">50</td>
+      <td class="border px-1 py-0.5">8</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">evaporator</td>
+      <td class="border px-1 py-0.5">7 000</td>
+      <td class="border px-1 py-0.5">5</td>
+      <td class="border px-1 py-0.5">75</td>
+      <td class="border px-1 py-0.5">2</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">RUTH</td>
+      <td class="border px-1 py-0.5">14 859</td>
+      <td class="border px-1 py-0.5">32</td>
+      <td class="border px-1 py-0.5">500</td>
+      <td class="border px-1 py-0.5">8</td>
+    </tr>    
+    <tr>
+      <td class="border px-1 py-0.5">weather</td>
+      <td class="border px-1 py-0.5">100 057</td>
+      <td class="border px-1 py-0.5">8</td>
+      <td class="border px-1 py-0.5">5000</td>
+      <td class="border px-1 py-0.5">2</td>
+    </tr>    
+    <tr>
+      <td class="border px-1 py-0.5">whales</td>
+      <td class="border px-1 py-0.5">450 001</td>
+      <td class="border px-1 py-0.5">32</td>
+      <td class="border px-1 py-0.5">300</td>
+      <td class="border px-1 py-0.5">6</td>
+    </tr>    
+    <tr>
+      <td class="border px-1 py-0.5">quake</td>
+      <td class="border px-1 py-0.5">6 440 998</td>
+      <td class="border px-1 py-0.5">32</td>
+      <td class="border px-1 py-0.5">100</td>
+      <td class="border px-1 py-0.5">4</td>
+    </tr>    
+    <tr>
+      <td class="border px-1 py-0.5">el_load</td>
+      <td class="border px-1 py-0.5">6 960 008</td>
+      <td class="border px-1 py-0.5">10</td>
+      <td class="border px-1 py-0.5">1000</td>
+      <td class="border px-1 py-0.5">5</td>
+    </tr>    
+    <tr>
+      <td class="border px-1 py-0.5">LTMM</td>
+      <td class="border px-1 py-0.5">25 132 289</td>
+      <td class="border px-1 py-0.5">6</td>
+      <td class="border px-1 py-0.5">200</td>
+      <td class="border px-1 py-0.5">3</td>
+    </tr>
+    </tbody>
+</table>
+
+---
+transition: fade
+---
+
+# Experimental Results
+Time to find the top motif in seconds
+
+<table class="w-full text-xs border-collapse border border-gray-300">
+  <thead>
+    <tr>
+      <th class="border px-1 py-0.5">dataset</th>
+      <th class="border px-1 py-0.5" colspan="2">LEIT-motifs</th>
+      <th class="border px-1 py-0.5">MSTUMP</th>
+      <th class="border px-1 py-0.5">EMD</th>
+      <th class="border px-1 py-0.5">RP</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th class="border px-1 py-0.5">Index build</th>
+      <th class="border px-1 py-0.5">Total</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-1 py-0.5">potentials</td>
+      <td class="border px-1 py-0.5">0.11</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">0.51</td>
+      <td class="border px-1 py-0.5">3.65</td>
+      <td class="border px-1 py-0.5">4.80</td>
+      <td class="border px-1 py-0.5">3.20</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">evaporator</td>
+      <td class="border px-1 py-0.5">0.16</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">0.55</td>
+      <td class="border px-1 py-0.5">4.45</td>
+      <td class="border px-1 py-0.5">12.95</td>
+      <td class="border px-1 py-0.5">6.78</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">RUTH</td>
+      <td class="border px-1 py-0.5">2.91</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">8.10</td>
+      <td class="border px-1 py-0.5">84.04</td>
+      <td class="border px-1 py-0.5">1.5h</td>
+      <td class="border px-1 py-0.5">2.3h</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">weather</td>
+      <td class="border px-1 py-0.5">15.04</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">33.37</td>
+      <td class="border px-1 py-0.5">1035.73</td>
+      <td class="border px-1 py-0.5">-</td>
+      <td class="border px-1 py-0.5">1.2h</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">whales</td>
+      <td class="border px-1 py-0.5">60.67</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">2.2 h</td>
+      <td class="border px-1 py-0.5">(2.7 days)</td>
+      <td class="border px-1 py-0.5">-</td>
+      <td class="border px-1 py-0.5">-</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">quake</td>
+      <td class="border px-1 py-0.5">175.3</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">3.6 h</td>
+      <td class="border px-1 py-0.5">(7.2 days)</td>
+      <td class="border px-1 py-0.5">-</td>
+      <td class="border px-1 py-0.5">-</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">el_load</td>
+      <td class="border px-1 py-0.5">180.2</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">2.8 h</td>
+      <td class="border px-1 py-0.5">(8.4 days)</td>
+      <td class="border px-1 py-0.5">-</td>
+      <td class="border px-1 py-0.5">-</td>
+    </tr>
+    <tr>
+      <td class="border px-1 py-0.5">LTMM</td>
+      <td class="border px-1 py-0.5">240.6</td>
+      <td class="border px-1 py-0.5 bg-green-100 text-black">15.6 h</td>
+      <td class="border px-1 py-0.5">(11.8 days)</td>
+      <td class="border px-1 py-0.5">-</td>
+      <td class="border px-1 py-0.5">-</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ---
 transition: fade
