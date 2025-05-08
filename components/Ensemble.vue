@@ -15,6 +15,13 @@ onMounted(() => {
   const width = canvas.width
   const height = canvas.height
 
+  // Detect background brightness
+  const bodyBg = window.getComputedStyle(document.body).backgroundColor
+  const isDark = isDarkBackground(bodyBg)
+
+  const textColor = isDark ? '#FFFFFF' : '#000000'
+  const pointColor = isDark ? '#F0F0F0' : '#303030'
+
   const hashes = [
     { x: 700, y: 100, color: '#FF6B6B', label: 'Hash A' },
     { x: 700, y: 200, color: '#4D96FF', label: 'Hash B' },
@@ -25,13 +32,21 @@ onMounted(() => {
 
   let points = []
 
+  function isDarkBackground(rgb) {
+    const rgbValues = rgb.match(/\d+/g)?.map(Number)
+    if (!rgbValues || rgbValues.length < 3) return false
+    const [r, g, b] = rgbValues
+    const luminance = 0.299 * r + 0.587 * g + 0.114 * b
+    return luminance < 128
+  }
+
   function spawnPoint() {
     const y = Math.random() * 300 + 50
     const targetHash = Math.floor(Math.random() * hashes.length)
     points.push({
       x: 50,
       y,
-      color: '#f2f2f2',
+      color: pointColor,
       targetHash,
       stage: 0,
     })
@@ -40,30 +55,30 @@ onMounted(() => {
   function draw() {
     ctx.clearRect(0, 0, width, height)
 
-    // Draw predictor
+    // Predictor
     ctx.fillStyle = '#FFD93D'
     ctx.beginPath()
     ctx.roundRect(predictor.x - 40, predictor.y - 30, 80, 60, 10)
     ctx.fill()
-    ctx.fillStyle = '#000'
+    ctx.fillStyle = textColor
     ctx.font = '14px sans-serif'
     ctx.textAlign = 'center'
     ctx.fillText('Predictor', predictor.x, predictor.y + 5)
 
-    // Draw hash circles
+    // Hash circles
     hashes.forEach(h => {
       ctx.fillStyle = h.color
       ctx.beginPath()
       ctx.arc(h.x, h.y, 22, 0, Math.PI * 2)
       ctx.fill()
 
-      ctx.fillStyle = '#FFFFFF'
+      ctx.fillStyle = textColor
       ctx.font = '13px sans-serif'
       ctx.textAlign = 'center'
       ctx.fillText(h.label, h.x, h.y + 38)
     })
 
-    // Draw and animate points
+    // Animate points
     points.forEach(p => {
       const target = p.stage === 0 ? predictor : hashes[p.targetHash]
       const dx = target.x - p.x
