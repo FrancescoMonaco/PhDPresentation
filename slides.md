@@ -193,7 +193,7 @@ transition: fade
 ---
 
 # Algorithms with Predictions
-A Bloom filter predictor for distance approximations
+A Bloom filter predictor for distance approximations 
 
 <Bloom />
 
