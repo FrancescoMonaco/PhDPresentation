@@ -56,7 +56,7 @@ transition: fade
 - Similarity search is a fundamental task where we want to find the most similar elements in a collection of elements.
 <br>
 
-- In particular, we are interested in the Near Neighbor Search (ANNS) problem.
+- In particular, we are interested in the Approximate Near Neighbor Search (ANNS) problem.
 
    - Given a set of elements and a query, we want to find the elements in the set <span v-mark.green = "1">that are closest</span> to the query.
    - This procedure is used in many applications like time series analysis, Minimum Spanning Tree, recommender systems.
@@ -99,7 +99,7 @@ The current challenges
 
 <br>
 
-- Neural predictors need to be trained using specific techniques (e.g., conformal predictions, calibrated predictions) and need lots of data to reach theoretical guarantees on the predictions.
+- Neural predictors need to be trained using specific techniques <span v-mark.orange="1">(e.g., conformal predictions, calibrated predictions)</span> and need lots of data to reach theoretical guarantees on the predictions.
 
 - We can use hash structures to obtain deployable and robust predictors.
 
@@ -116,6 +116,7 @@ What is the plan?
 
     - We obtain robust predictors that are easy to initialize and deploy.
     - We address the challenges posed by high-dimensional data in ANNS.
+    - We derive mechanisms that can be expandend in several downstream tasks.
 <br>
 ---
 transition: fade
@@ -128,7 +129,9 @@ What is the plan?
 - We want to integrate hash structures in the algorithms with predictions framework.
 
     - We obtain robust predictors that are easy to initialize and deploy.
-    - We address the challenges posed by high-dimensional data in ANNS.
+    - We address the challenges posed by high-dimensional data in ANNS.    
+    - We derive mechanisms that can be expandend in several downstream tasks.
+
 <br>
 
 - We expand in the offline setting.
@@ -149,10 +152,10 @@ A predictor for hash indices
 - <span v-mark.orange="1"> Setting</span>:
     Hash indices, structures to answer Approximate Near Neighbor Queries, are used for many downstream tasks like clustering, recommender systems or pattern matching.
 
-    Some hash indices, like PUFFINN*, are data adaptive and don't need have a set of parameters to tune.
+    Some hash indices, like PUFFINN*, are data adaptive and don't have a set of parameters to tune, making them more general.
 
 - <span v-mark.red="2"> Problem</span>:
-     Data adaptive hash indices are usually slower than the non-adaptive ones during the search operation, we would like to keep the data adaptive property while making it competitive with carefully hash indices.
+     Data adaptive hash indices are usually slower than the non-adaptive ones during the search operation, we would like to reduce search time.
 
 - <span v-mark.green="3"> Solution</span>:
     We implement a predictor based on clusters and coresets that drives the search of the hash index. Saving time during the search operation.
@@ -179,14 +182,14 @@ A Bloom filter predictor for distance approximations
 <br>
 
 - <span v-mark.orange="1"> Setting</span>:
-    Computing distances between elements is fundamental in tasks of similarity search.
+    Computing distances between elements is fundamental in tasks of ANN.
 
 - <span v-mark.red="2"> Problem</span>:
-    Computing distances is expensive, especially in high dimensional spaces. We want to approximate the distance between two elements using a small subset of their dimensions.
+    Computing distances is expensive, especially in high dimensional spaces. We want to approximate the distance between elements using a small subset of their dimensions.
     Current methods to approximate distances have known problems on robustness.
 
 - <span v-mark.green="3"> Solution</span>:
-    We implement a sensitive Bloom filter to select the most relevant dimensions to be used in the distance approximation. We use the filter rapresentation to estimate the remaining dimensions.
+    We implement a sensitive Bloom filter predictor to select the most relevant dimensions and estimate the distance between elements. We expect it to be robust given the theoretical properties of the Bloom filter.
 
 ---
 transition: fade
