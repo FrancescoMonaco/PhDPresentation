@@ -280,65 +280,47 @@ How much can predictors help? An application to motif discovery
         <th class="border px-1 py-0.5">dataset</th>
         <th class="border px-1 py-0.5">n (length)</th>
         <th class="border px-1 py-0.5">D (dimensionality)</th>
-        <th class="border px-1 py-0.5">w (window)</th>
-        <th class="border px-1 py-0.5">d (motif dimensionality)</th>
   </thead>
     <tbody>
     <tr>
       <td class="border px-1 py-0.5">potentials</td>
       <td class="border px-1 py-0.5">2 500</td>
       <td class="border px-1 py-0.5">8</td>
-      <td class="border px-1 py-0.5">50</td>
-      <td class="border px-1 py-0.5">8</td>
     </tr>
     <tr>
       <td class="border px-1 py-0.5">evaporator</td>
       <td class="border px-1 py-0.5">7 000</td>
       <td class="border px-1 py-0.5">5</td>
-      <td class="border px-1 py-0.5">75</td>
-      <td class="border px-1 py-0.5">2</td>
     </tr>
     <tr>
       <td class="border px-1 py-0.5">RUTH</td>
       <td class="border px-1 py-0.5">14 859</td>
       <td class="border px-1 py-0.5">32</td>
-      <td class="border px-1 py-0.5">500</td>
-      <td class="border px-1 py-0.5">8</td>
     </tr>    
     <tr>
       <td class="border px-1 py-0.5">weather</td>
       <td class="border px-1 py-0.5">100 057</td>
       <td class="border px-1 py-0.5">8</td>
-      <td class="border px-1 py-0.5">5000</td>
-      <td class="border px-1 py-0.5">2</td>
     </tr>    
     <tr>
       <td class="border px-1 py-0.5">whales</td>
       <td class="border px-1 py-0.5">450 001</td>
       <td class="border px-1 py-0.5">32</td>
-      <td class="border px-1 py-0.5">300</td>
-      <td class="border px-1 py-0.5">6</td>
     </tr>    
     <tr>
       <td class="border px-1 py-0.5">quake</td>
       <td class="border px-1 py-0.5">6 440 998</td>
       <td class="border px-1 py-0.5">32</td>
-      <td class="border px-1 py-0.5">100</td>
-      <td class="border px-1 py-0.5">4</td>
     </tr>    
     <tr>
       <td class="border px-1 py-0.5">el_load</td>
       <td class="border px-1 py-0.5">6 960 008</td>
       <td class="border px-1 py-0.5">10</td>
-      <td class="border px-1 py-0.5">1000</td>
-      <td class="border px-1 py-0.5">5</td>
     </tr>    
     <tr>
       <td class="border px-1 py-0.5">LTMM</td>
       <td class="border px-1 py-0.5">25 132 289</td>
       <td class="border px-1 py-0.5">6</td>
-      <td class="border px-1 py-0.5">200</td>
-      <td class="border px-1 py-0.5">3</td>
     </tr>
     </tbody>
 </table>
