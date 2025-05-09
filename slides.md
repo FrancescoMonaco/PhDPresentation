@@ -50,6 +50,21 @@ transition: fade
 ---
 
 # The Setting
+A continuos increase in the volume of data
+
+<br>
+
+ - We need to find efficient techniques to deal with this data.
+
+ - Many mining algorithms scale with super linear time complexity.
+
+
+---
+transition: fade
+---
+
+# The Setting
+Similairty Search
 
 <br>
 
@@ -59,22 +74,8 @@ transition: fade
 - In particular, we are interested in the Approximate Near Neighbor Search (ANNS) problem.
 
    - Given a set of elements and a query, we want to find the elements in the set <span v-mark.green = "1">that are closest</span> to the query.
-   - This procedure is used in many applications like time series analysis, Minimum Spanning Tree, recommender systems.
+   - This procedure is used in applications like time series analysis to find common patterns, Minimum Spanning Tree to find the minimal edges, recommender systems to find similar elements to propose.
 
----
-transition: fade
----
-
-# The Problem
-A continuos increase in the volume of data
-
-<br>
-
- - Many similarity search algorithms scale with super linear behaviors.
-
- - We need to find efficient techniques to deal with this data.
-
- - We want to have theoretical guarantees on the performance of our algorithms and the quality of the results.
 
 ---
 transition: fade
@@ -99,7 +100,15 @@ The current challenges
 
 <br>
 
-- Neural predictors need to be trained using specific techniques (e.g., <span v-mark.orange="1">conformal or calibrated predictions</span>) and need lots of data to reach theoretical guarantees on the predictions.
+- Neural predictors need to be trained using specific techniques (e.g., <span v-mark.orange="1">conformal or calibrated predictions</span>) 
+
+- Need lots of data to reach theoretical guarantees on the predictions.
+
+- Not easy to deploy in real-world applications.
+
+<br>
+
+Idea:
 
 - We can use hash structures to obtain deployable and robust predictors.
 
