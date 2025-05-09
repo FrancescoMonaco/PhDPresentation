@@ -54,6 +54,8 @@ A continuos increase in the volume of data
 
 <br>
 
+ - We want to analyze and extract information from large amounts of data.
+
  - We need to find efficient techniques to deal with this data.
 
  - Many mining algorithms scale with super linear time complexity.
