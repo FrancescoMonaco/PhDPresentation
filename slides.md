@@ -224,7 +224,7 @@ Improving quality for drifting data
      Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks. Extremely useful to deal with data drift.
 
 - <span v-mark.blue="2"> Idea</span>:
-    We want to extend the idea of ensembles to the hash setting. We want to use multiple hash indices to improve the performance of the search.
+    We want to extend the idea of ensembles to the hash setting. We want to use multiple hash indices to improve the performance of the search and support mixture data.
 
 - <span v-mark.green="3"> Solution</span>:
     We implement an ensembles of hash indices, indices will complement each other on different data distributions. A predictor will be used to select the best hash index for the current data distribution.
