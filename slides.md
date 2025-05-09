@@ -155,8 +155,8 @@ What is the plan?
 transition: fade
 ---
 
-# Algorithms with Predictions
-A predictor for hash indices
+# A predictor for hash indices
+Faster ANN search
 
 <br>
 
@@ -178,8 +178,8 @@ A predictor for hash indices
 transition: fade
 ---
 
-# Algorithms with Predictions
-A predictor for hash indices
+# A predictor for hash indices
+Faster ANN search
 
 <HashTreeAnimation />
 
@@ -187,8 +187,8 @@ A predictor for hash indices
 transition: fade
 ---
 
-# Algorithms with Predictions
-A Bloom filter predictor for distance approximations
+# A Bloom filter predictor for distance approximations
+Faster distance computations in ANN
 
 <br>
 
@@ -206,8 +206,8 @@ A Bloom filter predictor for distance approximations
 transition: fade
 ---
 
-# Algorithms with Predictions
-A Bloom filter predictor for distance approximations 
+# A Bloom filter predictor for distance approximations
+Faster distance computations in ANN
 
 <Bloom />
 
@@ -215,8 +215,8 @@ A Bloom filter predictor for distance approximations
 transition: fade
 ---
 
-# Algorithms with Predictions
-A predictor for hash ensembles
+# A predictor for hash ensembles
+Improving quality for drifting data
 
 <br>
 
@@ -233,8 +233,8 @@ A predictor for hash ensembles
 transition: fade
 ---
 
-# Algorithms with Predictions
-A predictor for hash ensembles
+# A predictor for hash ensembles
+Improving quality for drifting data
 
 <Ensemble />
 
