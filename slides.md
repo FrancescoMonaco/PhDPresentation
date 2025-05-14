@@ -218,7 +218,7 @@ transition: fade
 # Extra
 Counting Triangles in a graph
 
-<img src="/images/tonic.png" style="width:auto; height:auto;" />
+<img src="/images/tonic.png" style="width:auto; height:65%;" />
 
 ###### *([Boldrin, Vandin, 2024](https://arxiv.org/pdf/2409.15205))
 
