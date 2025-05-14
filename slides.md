@@ -314,6 +314,8 @@ How much can predictors help? An application to motif discovery
     </tbody>
 </table>
 
+###### *([Ceccarello, Monaco, Silvestri, 2025](https://arxiv.org/pdf/2502.14446))
+
 ---
 transition: fade
 ---
