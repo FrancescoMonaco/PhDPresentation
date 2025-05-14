@@ -215,35 +215,13 @@ Faster distance computations in ANN
 transition: fade
 ---
 
-# A predictor for hash ensembles
-Improving quality for drifting data
+# Extra
+Counting Triangles in a graph
 
-<br>
+<img src="/images/tonic.png" style="width:auto; height:auto;" />
 
-- <span v-mark.orange="1"> Setting</span>:
-     Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks. Extremely useful to deal with data drift.
+###### *([Boldrin, Vandin, 2024](https://arxiv.org/pdf/2409.15205))
 
-- <span v-mark.blue="2"> Idea</span>:
-    We want to extend the idea of ensembles to the hash setting. We want to use multiple hash indices to improve the performance of the search and support mixture data.
-
-- <span v-mark.green="3"> Solution</span>:
-    We implement an ensembles of hash indices, indices will complement each other on different data distributions. A predictor will be used to select the best hash index for the current data distribution.
-
----
-transition: fade
----
-
-# A predictor for hash ensembles
-Improving quality for drifting data
-
-<Ensemble />
-
----
-transition: fade
-layout: center
----
-
-# <span class="leit-title">ThanKs foR <br> yOuR AttenTion</span>
 
 ---
 transition: fade
@@ -429,6 +407,39 @@ Time to find the top motif in seconds
   </tbody>
 </table>
 
+---
+transition: fade
+---
+
+# A predictor for hash ensembles
+Improving quality for drifting data
+
+<br>
+
+- <span v-mark.orange="1"> Setting</span>:
+     Ensembles are a family of algorithms that use multiple models to improve the performance. They are used in many neural tasks. Extremely useful to deal with data drift.
+
+- <span v-mark.blue="2"> Idea</span>:
+    We want to extend the idea of ensembles to the hash setting. We want to use multiple hash indices to improve the performance of the search and support mixture data.
+
+- <span v-mark.green="3"> Solution</span>:
+    We implement an ensembles of hash indices, indices will complement each other on different data distributions. A predictor will be used to select the best hash index for the current data distribution.
+
+---
+transition: fade
+---
+
+# A predictor for hash ensembles
+Improving quality for drifting data
+
+<Ensemble />
+
+---
+transition: fade
+layout: center
+---
+
+# <span class="leit-title">ThanKs foR <br> yOuR AttenTion</span>
 
 ---
 transition: fade
