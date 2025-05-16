@@ -215,8 +215,8 @@ Faster distance computations in ANN
 transition: fade
 ---
 
-# Extra
-Counting Triangles in a graph
+# Some Results in the literature
+How much can predictors help? An application to triangle counting in graphs
 
 <img src="/images/tonic.png" style="width:auto; height:65%;" />
 
@@ -227,42 +227,8 @@ Counting Triangles in a graph
 transition: fade
 ---
 
-# Extra
-A Computer Vision application
-
-- A CNN is used conjunctly with an LSTM to create a textual description of the people in a video stream.
-
-- To reverse search in a video from a textual description a hash index is used to find the matching frames.
-
-- The description creates a textual embedding, ANN search finds the closest frames in the hash index, the frames are then retrieved and the CNN is used to find the people in the frames.
-
-<img src="/images/mdpi.png" style="width:auto; height:35%;" />
-
-<br>
-
-###### *([Yuenyoung et al., 2022](https://www.mdpi.com/2504-2289/6/4/136))
-
----
-transition: fade
----
-
-# Extra
-An industry application
-
-- A hash index is used to cluster behaviours of a set of sensors in an incinerator.
-
-- A dictionary of behaviours helps the recognition of anomalies.
-
-- The project was carried out in collaboration with beanTech IT.
-
-<img src="/images/multidim_shap_profile.png" style="width:auto; height:65%;" />
-
----
-transition: fade
----
-
-# Extra
-How much can predictors help? An application to motif discovery
+# Some Results in the literature
+How much can predictors help? An application to motif discovery in multivariate time series
 
 <table class="w-full text-xs border-collapse border border-gray-300">
   <thead>
@@ -408,6 +374,42 @@ Time to find the top motif in seconds
     </tr>
   </tbody>
 </table>
+
+
+---
+transition: fade
+---
+
+# Extra
+A Computer Vision application
+
+- A CNN is used conjunctly with an LSTM to create a textual description of the people in a video stream.
+
+- To reverse search in a video from a textual description a hash index is used to find the matching frames.
+
+- The description creates a textual embedding, ANN search finds the closest frames in the hash index, the frames are then retrieved and the CNN is used to find the people in the frames.
+
+<img src="/images/mdpi.png" style="width:auto; height:35%;" />
+
+<br>
+
+###### *([Yuenyoung et al., 2022](https://www.mdpi.com/2504-2289/6/4/136))
+
+---
+transition: fade
+---
+
+# Extra
+An industry application
+
+- A hash index is used to cluster behaviours of a set of sensors in an incinerator.
+
+- A dictionary of behaviours helps the recognition of anomalies.
+
+- The project was carried out in collaboration with beanTech IT.
+
+<img src="/images/multidim_shap_profile.png" style="width:auto; height:65%;" />
+
 
 ---
 transition: fade
