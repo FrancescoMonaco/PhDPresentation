@@ -220,6 +220,8 @@ How much can predictors help? An application to triangle counting in graphs
 
 <img src="/images/tonic.png" style="width:auto; height:65%;" />
 
+<br>
+
 ###### *([Boldrin, Vandin, 2024](https://arxiv.org/pdf/2409.15205))
 
 
@@ -279,6 +281,8 @@ How much can predictors help? An application to motif discovery in multivariate 
     </tr>
     </tbody>
 </table>
+
+<br>
 
 ###### *([Ceccarello, Monaco, Silvestri, 2025](https://arxiv.org/pdf/2502.14446))
 
