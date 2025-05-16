@@ -110,7 +110,7 @@ The current challenges
 
 <br>
 
-Idea:
+<span v-mark.circle.green="2">Idea</span>:
 
 - We can use hash structures to obtain deployable and robust predictors.
 
