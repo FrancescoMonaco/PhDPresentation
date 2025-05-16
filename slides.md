@@ -119,7 +119,7 @@ The current challenges
 transition: fade
 ---
 
-# Algorithms with Predictions
+# Goals of the project
 What is the plan?
 <br>
 
@@ -133,7 +133,7 @@ What is the plan?
 transition: fade
 ---
 
-# Algorithms with Predictions
+# Goals of the project
 What is the plan?
 <br>
 
