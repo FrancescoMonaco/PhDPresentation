@@ -41,7 +41,7 @@ mdc: true
 
 <div class="absolute bottom-10">
   <span class="font-700">
-    Francesco Pio Monaco, May 2025
+    Francesco Pio Monaco, June 2025
   </span>
 </div>
 
@@ -66,7 +66,7 @@ transition: fade
 ---
 
 # The Setting
-Similairty Search
+Similarity Search
 
 <br>
 
