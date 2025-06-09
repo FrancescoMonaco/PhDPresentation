@@ -73,10 +73,25 @@ Similarity Search
 - Similarity search is a fundamental task where we want to find the most similar elements in a collection of elements.
 <br>
 
-- In particular, we are interested in the Approximate Near Neighbor Search (ANNS) problem.
+- In particular, we are interested in the <b>Approximate Near Neighbor Search</b> (ANNS) problem.
 
    - Given a set of elements and a query, we want to find the elements in the set <span v-mark.green = "1">that are closest</span> to the query.
    - This procedure is used in applications like time series analysis to find common patterns, Minimum Spanning Tree to find the minimal edges, recommender systems to find similar elements to propose.
+
+---
+transition: fade
+---
+
+# ANN Search
+The current challenges
+
+<br>
+
+- High computational cost of the similarity computations, exacerbated by the curse of dimensionality.
+
+- At large scale, the search efficiency is crucial, so we need to maximize its performance.
+
+- Difficulty for other researchers to integrate the data structures in their algorithms due to the parameter tuning.
 
 
 ---
@@ -156,12 +171,12 @@ transition: fade
 ---
 
 # A predictor for hash indices
-Faster ANN search
+Faster ANN Search
 
 <br>
 
 - <span v-mark.orange="1"> Setting</span>:
-    Hash indices, structures to answer Approximate Near Neighbor Queries, are used for many downstream tasks like clustering, recommender systems or pattern matching.
+    Hash indices, structures to answer ANN Queries, are used for many downstream tasks like clustering, recommender systems or pattern matching.
 
     Some hash indices, like PUFFINN*, are data adaptive and don't have a set of parameters to tune, making them more general.
 
@@ -188,19 +203,19 @@ transition: fade
 ---
 
 # A Bloom filter predictor for distance approximations
-Faster distance computations in ANN
+Faster similarity computations in ANN
 
 <br>
 
 - <span v-mark.orange="1"> Setting</span>:
-    Computing distances between elements is fundamental in tasks of ANN.
+    Computing similarity between elements is fundamental in tasks of ANN.
 
 - <span v-mark.red="2"> Problem</span>:
-    Computing distances is expensive, especially in high dimensional spaces. We want to approximate the distance between elements using a small subset of their dimensions.
-    Current methods to approximate distances have known problems on robustness.
+    Computing similarities is expensive, especially in high dimensional spaces. We want to approximate the similarity between elements using a small subset of their dimensions.
+    Current methods to approximate similarity have known problems on robustness.
 
 - <span v-mark.green="3"> Solution</span>:
-    We implement a sensitive Bloom filter predictor to select the most relevant dimensions and estimate the distance between elements. We expect it to be robust given the theoretical properties of the Bloom filter.
+    We implement a sensitive Bloom filter predictor to select the most relevant dimensions and estimate the similarity between elements. We expect it to be robust given the theoretical properties of the Bloom filter.
 
 ---
 transition: fade
