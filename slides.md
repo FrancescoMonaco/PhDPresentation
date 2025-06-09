@@ -145,10 +145,10 @@ What is the plan?
 
 <br>
 
-- We expand in the offline setting.
+- We take data agnostic algorithms and extend them with predictors.
 
-    - The algorithm with predictions framework started for streaming data.
-    - In the last months some works showed that it is beneficial also in the offline one.
+    - Predictors change the behavior of the algorithm based on data properties.
+    - We expect to greatly improve the performance of the algorithm and the quality of the results in the average case.
 
 
 ---
@@ -215,28 +215,14 @@ Faster distance computations in ANN
 transition: fade
 ---
 
-# Some Results in the literature
-How much can predictors help? An application to triangle counting in graphs
-
-<img src="/images/tonic.png" style="width:auto; height:65%;" />
-
-<br>
-
-###### *([Boldrin, Vandin, 2024](https://arxiv.org/pdf/2409.15205))
-
-
----
-transition: fade
----
-
-# Some Results in the literature
+# Some Results from my current work
 How much can predictors help? An application to motif discovery in multivariate time series
 
 <table class="w-full text-xs border-collapse border border-gray-300">
   <thead>
-        <th class="border px-1 py-0.5">dataset</th>
-        <th class="border px-1 py-0.5">n (length)</th>
-        <th class="border px-1 py-0.5">D (dimensionality)</th>
+        <th class="border px-1 py-0.5"><b>dataset</b></th>
+        <th class="border px-1 py-0.5"><b>n (length)</b></th>
+        <th class="border px-1 py-0.5"><b>D (dimensionality)</b></th>
   </thead>
     <tbody>
     <tr>
@@ -296,11 +282,11 @@ Time to find the top motif in seconds
 <table class="w-full text-xs border-collapse border border-gray-300">
   <thead>
     <tr>
-      <th class="border px-1 py-0.5">dataset</th>
-      <th class="border px-1 py-0.5" colspan="2">LEIT-motifs</th>
-      <th class="border px-1 py-0.5">MSTUMP</th>
-      <th class="border px-1 py-0.5">EMD</th>
-      <th class="border px-1 py-0.5">RP</th>
+      <th class="border px-1 py-0.5"><b>dataset</b></th>
+      <th class="border px-1 py-0.5" colspan="2"><b>LEIT-motifs</b></th>
+      <th class="border px-1 py-0.5"><b>MSTUMP</b></th>
+      <th class="border px-1 py-0.5"><b>EMD</b></th>
+      <th class="border px-1 py-0.5"><b>RP</b></th>
     </tr>
     <tr>
       <th></th>
@@ -448,6 +434,19 @@ layout: center
 ---
 
 # <span class="leit-title">ThanKs foR <br> yOuR AttenTion</span>
+
+---
+transition: fade
+---
+
+# Some Results in the literature
+How much can predictors help? An application to triangle counting in graphs
+
+<img src="/images/triangle.png" style="width:auto; height:65%;" />
+
+<br>
+
+###### *([Chen, et al., 2022](https://arxiv.org/pdf/2203.09572))
 
 ---
 transition: fade
