@@ -3,7 +3,7 @@
 theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: black
 # some information about your slides (markdown enabled)
 title: Enriching Similarity Search Algorithms with Predictors
 titleTemplate: '%s'
@@ -37,11 +37,13 @@ mdc: true
   letter-spacing: 0.05em;
 }
 </style>
-# <span class="leit-title">Enriching Similarity Search Algorithms with Predictors</span>
+
+# Enriching Similarity Search Algorithms with Predictors
+ <span class="leit-title">. ,</span>
 
 <div class="absolute bottom-10">
   <span class="font-700">
-    Francesco Pio Monaco, June 2025
+    Francesco Pio Monaco, July 2025
   </span>
 </div>
 
@@ -49,7 +51,7 @@ mdc: true
 transition: fade
 ---
 
-# The Setting
+# Big Data
 A continuos increase in the volume of data
 
 <br>
@@ -65,8 +67,8 @@ A continuos increase in the volume of data
 transition: fade
 ---
 
-# The Setting
-Similarity Search
+# Similarity Search
+The Setting
 
 <br>
 
@@ -82,8 +84,7 @@ Similarity Search
 transition: fade
 ---
 
-# ANN Search
-The current challenges
+# The Current Challenges
 
 <br>
 
@@ -141,29 +142,8 @@ What is the plan?
 - We want to integrate hash structures in the algorithms with predictions framework.
 
     - We obtain robust predictors that are easy to initialize and deploy.
-    - We address the challenges posed by high-dimensional data in ANNS.
-    - We derive mechanisms that can be expandend in several downstream tasks.
-<br>
----
-transition: fade
----
-
-# Goals of the project
-What is the plan?
-<br>
-
-- We want to integrate hash structures in the algorithms with predictions framework.
-
-    - We obtain robust predictors that are easy to initialize and deploy.
-    - We address the challenges posed by high-dimensional data in ANNS.    
-    - We derive mechanisms that can be expandend in several downstream tasks.
 
 <br>
-
-- We take data agnostic algorithms and extend them with predictors.
-
-    - Predictors change the behavior of the algorithm based on data properties.
-    - We expect to greatly improve the performance of the algorithm and the quality of the results in the average case.
 
 
 ---
@@ -198,6 +178,21 @@ Faster ANN search
 
 <HashTreeAnimation />
 
+
+---
+transition: fade
+---
+
+# Goals of the project
+What is the plan?
+<br>
+
+- We want to integrate hash structures in the algorithms with predictions framework.
+
+    - We obtain robust predictors that are easy to initialize and deploy.
+    - We address the challenges posed by high-dimensional data in ANNS.
+<br>
+
 ---
 transition: fade
 ---
@@ -225,6 +220,21 @@ transition: fade
 Faster distance computations in ANN
 
 <Bloom />
+
+---
+transition: fade
+---
+
+# Goals of the project
+What is the plan?
+<br>
+
+- We want to integrate hash structures in the algorithms with predictions framework.
+
+    - We obtain robust predictors that are easy to initialize and deploy.
+    - We address the challenges posed by high-dimensional data in ANNS.
+    - We derive mechanisms that can be expandend in several downstream tasks.
+<br>
 
 ---
 transition: fade
