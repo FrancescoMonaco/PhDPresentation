@@ -54,7 +54,7 @@ transition: fade
 # Big Data
 A continuos increase in the volume of data
 
-<br>
+
 
  - We want to analyze and extract information from large amounts of data.
 
@@ -62,6 +62,10 @@ A continuos increase in the volume of data
 
  - Many mining algorithms scale with super linear time complexity.
 
+
+<img src="/images/volume.png" style="width:auto; height:50%; margin-left:auto; margin-right:auto;" />
+
+###### ([IDC Report, 2028-2035](https://my.idc.com/getdoc.jsp?containerId=US52076424))
 
 ---
 transition: fade
@@ -86,7 +90,6 @@ transition: fade
 
 # The Current Challenges
 
-<br>
 
 - High computational cost of the similarity computations, exacerbated by the curse of dimensionality.
 
@@ -94,13 +97,17 @@ transition: fade
 
 - Difficulty for other researchers to integrate the data structures in their algorithms due to the parameter tuning.
 
+<img src="/images/naive.png" style="width:auto; height:55%; margin-left:auto; margin-right:auto;" />
+
+###### ([Yu, Yaushin, 2018](https://arxiv.org/pdf/1603.09320))
+
 
 ---
 transition: fade
 ---
 
-# A Recent Development
-Algorithms with Predictions
+# Algorithms with Predictions
+A Recent Development
 
 <br>
 
